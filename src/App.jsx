@@ -7,6 +7,7 @@ import {
   Feedbacks,
   Hero,
   Navbar,
+  Preloader,
   StarsCanvas,
   Works,
 } from "./components";
@@ -16,28 +17,30 @@ import SkillKeyboard from "./components/SkillKeyboard";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div
-        className="relative z-0"
-        style={{ backgroundColor: "hsl(222.2 84% 4.9%)" }}
-      >
-        <ElasticCursor />
-        <EasterEggs />
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar />
-          <Hero />
+    <Preloader>
+      <BrowserRouter>
+        <div
+          className="relative z-0"
+          style={{ backgroundColor: "hsl(222.2 84% 4.9%)" }}
+        >
+          <ElasticCursor />
+          <EasterEggs />
+          <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+            <Navbar />
+            <Hero />
+          </div>
+          <StarsCanvas />
+          <About />
+          <Achievement />
+          <SkillKeyboard />
+          <Works />
+          <Feedbacks />
+          <div className="relative z-0">
+            <Contact />
+          </div>
         </div>
-        <StarsCanvas />
-        <About />
-        <Achievement />
-        <SkillKeyboard />
-        <Works />
-        <Feedbacks />
-        <div className="relative z-0">
-          <Contact />
-        </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </Preloader>
   );
 };
 
