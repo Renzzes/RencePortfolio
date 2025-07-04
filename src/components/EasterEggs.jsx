@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import soundEffects from "../utils/soundEffects";
 import { useDevToolsOpen } from "../utils/useDevToolsOpen";
 import NyanCat from "./NyanCat";
 
@@ -13,7 +14,7 @@ const EasterEggs = () => {
           "Looks like you've cracked open the secret console vault... 🧠🔐\n" +
           "Curious minds get rewarded. Want to witness something magical?\n" +
           "Just type %cmy first name%c and press Enter. 🎩✨" +
-          "%cSpoiler: It's not Gandalf. 😉",
+          "%c\nSpoiler: It's not Gandalf. 😉",
         "color: #FFD700; font-size: 16px; font-weight: bold; background-color: black; padding: 12px; border-radius: 10px; margin-top: 20px",
         "color: #00FF00; font-size: 16px; font-weight: bold; background-color: black; padding: 12px; border-radius: 10px",
         "color: #FFD700; font-size: 16px; font-weight: bold; background-color: black; padding: 12px; border-radius: 10px",
@@ -24,11 +25,12 @@ const EasterEggs = () => {
         Object.defineProperty(window, name, {
           get() {
             window.__easterEggUnlocked = true;
+            soundEffects.playMagic();
             console.log(
               "%c✨ ABRA KADABRA ✨\n" +
                 "You've just summoned the legendary Jayant! 🧙‍♂️💻\n" +
                 "What's that? Not impressed yet? 😤\n" +
-                "Fine. But don’t forget the golden rule:\n" +
+                "Fine. But don't forget the golden rule:\n" +
                 "⚠️ With great power comes great debugging responsibility.",
               "color: #FF4500; font-size: 18px; font-weight: bold; background-color: black; padding: 12px; border-radius: 10px; margin-top: 10px"
             );

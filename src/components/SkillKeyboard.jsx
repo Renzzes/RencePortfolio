@@ -8,6 +8,7 @@ import React, { Suspense, useEffect, useRef, useState } from "react";
 import { SKILLS, SkillNames } from "../constants/skills";
 import { sleep } from "../utils/sleep";
 import useMediaQuery from "../utils/useMediaQuery";
+import soundEffects from "../utils/soundEffects";
 
 // Lazy-load the Spline React component for 3D rendering
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
@@ -246,6 +247,7 @@ const SkillKeyboard = () => {
       if (skill) setSelectedSkill(skill);
       splineApp.setVariable("heading", skill?.label || "");
       splineApp.setVariable("desc", skill?.shortDescription || "");
+      soundEffects.playClick();
     });
     // Handle mouse hover on keys
     splineApp.addEventListener("mouseHover", handleMouseHover);

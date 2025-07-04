@@ -5,6 +5,7 @@ import React, { useRef, useState } from "react";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
+import soundEffects from "../utils/soundEffects";
 import { EarthCanvas } from "./canvas";
 import Toast from "./ui/toast";
 
@@ -37,6 +38,7 @@ const Contact = () => {
     e.preventDefault();
     // Validate form fields
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      soundEffects.playNotification();
       setToast({
         open: true,
         message: "Please fill in all fields before submitting.",
@@ -53,6 +55,7 @@ const Contact = () => {
 
     if (!serviceId || !templateId || !publicKey) {
       setLoading(false);
+      soundEffects.playNotification();
       setToast({
         open: true,
         message:
@@ -78,6 +81,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
+          soundEffects.playNotification();
           setToast({
             open: true,
             message: "Thank you. I will get back to you as soon as possible.",
@@ -92,6 +96,7 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
+          soundEffects.playNotification();
           setToast({
             open: true,
             message: "Ahh, something went wrong. Please try again.",
