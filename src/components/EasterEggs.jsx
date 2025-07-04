@@ -9,13 +9,15 @@ const EasterEggs = () => {
     if (typeof console !== "undefined") {
       console.clear();
       console.log(
-        "%cWhoa, look at you! 🕵️‍♂️\n" +
-          "You seem to have discovered the secret console! 🔍\n" +
-          "Want to see some magic? ✨\n" +
-          "Just type %cmy first name%c and hit enter! 🎩🐇",
-        "color: #FFD700; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px; margin-top:20px",
-        "color: #00FF00; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px; margin-top:20px",
-        "color: #FFD700; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px;"
+        "%c👀 Whoa there, inspector!\n" +
+          "Looks like you've cracked open the secret console vault... 🧠🔐\n" +
+          "Curious minds get rewarded. Want to witness something magical?\n" +
+          "Just type %cmy first name%c and press Enter. 🎩✨" +
+          "%cSpoiler: It's not Gandalf. 😉",
+        "color: #FFD700; font-size: 16px; font-weight: bold; background-color: black; padding: 12px; border-radius: 10px; margin-top: 20px",
+        "color: #00FF00; font-size: 16px; font-weight: bold; background-color: black; padding: 12px; border-radius: 10px",
+        "color: #FFD700; font-size: 16px; font-weight: bold; background-color: black; padding: 12px; border-radius: 10px",
+        "color: #FFD700; font-size: 12px; font-weight: bold; background-color: black; padding: 6px; border-radius: 8px; margin-top: 20px"
       );
       ["jayant", "Jayant", "JAYANT"].forEach((name) => {
         if (Object.hasOwn(window, name)) return;
@@ -23,19 +25,26 @@ const EasterEggs = () => {
           get() {
             window.__easterEggUnlocked = true;
             console.log(
-              "%c✨ Abra Kadabra! ✨\n" +
-                "You just summoned the magic of Jayant! 🧙‍♂️\n" +
-                "What??? your not impressed? Fine, but remember: With great power comes great responsibility! 💻⚡",
-              "color: #FF4500; font-size: 18px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px; margin-top:10px"
+              "%c✨ ABRA KADABRA ✨\n" +
+                "You've just summoned the legendary Jayant! 🧙‍♂️💻\n" +
+                "What's that? Not impressed yet? 😤\n" +
+                "Fine. But don’t forget the golden rule:\n" +
+                "⚠️ With great power comes great debugging responsibility.",
+              "color: #FF4500; font-size: 18px; font-weight: bold; background-color: black; padding: 12px; border-radius: 10px; margin-top: 10px"
             );
             const timer = setTimeout(() => {
               console.log(
-                "%cPssttt! 🤫\n\n" +
-                  "Do you like cats?? 😺 If yes, then press 'm' on viewport and see what happens! 🐱✨",
-                "color: #FF69B4; font-size: 16px; font-weight: bold; background-color: black; padding: 10px; border-radius: 10px;"
+                "%c🤫 Pssttt...\n" +
+                  "You've unlocked Level 1 of Jayant's secrets.\n" +
+                  "But are you REALLY ready for Level 2?\n" +
+                  "😺 If you're a true cat person, just press %c'm'%c anywhere on the screen...\n" +
+                  "And brace yourself for... 🐾 Feline overload.",
+                "color: #FF69B4; font-size: 16px; font-weight: bold; background-color: black; padding: 8px; border-radius: 10px; margin-top: 8px",
+                "color: #00FF00; font-size:18px; font-weight: bolder;margin-top: 8px;background-color: white; padding: 6px; border-radius: 8px; margin-right:6px; margin-left:6px",
+                "color: #FF69B4; font-size: 16px; font-weight: bold; background-color: black; padding: 8px; border-radius: 10px; margin-top: 8px"
               );
               clearTimeout(timer);
-            }, 7000);
+            }, 1000);
             return "";
           },
         });
@@ -43,7 +52,12 @@ const EasterEggs = () => {
       if (!Object.hasOwn(window, "Bankai")) {
         Object.defineProperty(window, "Bankai", {
           get() {
-            return "Katen Kyokotsu: Karamatsu Shinju";
+            console.log(
+              "%c💥 BANKAI! %cKaten Kyokotsu: Karamatsu Shinju 🗡️",
+              "color: red; font-size: 18px; font-weight: bold;",
+              "color: cyan; font-size: 16px;"
+            );
+            return undefined;
           },
         });
       }

@@ -120,11 +120,11 @@ const Navbar = () => {
       transition={{ duration: 0.8 }}
     >
       <div className="flex items-center justify-between max-w-8xl my-2 mx-4 relative">
-        <Link to="/" className="flex mx-6 items-center justify-center">
+        <a href="#hero" className="flex mx-6 items-center justify-center">
           <span className="text-md">
             <img src={logo} alt="logo" className="h-16 object-contain" />
           </span>
-        </Link>
+        </a>
         <button
           onClick={() => setIsActive((v) => !v)}
           className="flex items-center justify-center gap-3 m-0 p-0 h-6 bg-transparent text-base font-normal"
