@@ -67,11 +67,11 @@ const Contact = () => {
         serviceId,
         templateId,
         {
-          from_name: form.name,
-          to_name: "Jayant Potdar",
-          from_email: form.email,
-          to_email: "jayantpotdar2006@gmail.com",
-          message: form.message,
+          user_name: form.name,
+          my_name: "Jayant Potdar",
+          user_email: form.email,
+          my_email: "jayantpotdar2006@gmail.com",
+          user_message: form.message,
         },
         publicKey
       )
