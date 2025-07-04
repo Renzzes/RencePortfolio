@@ -39,10 +39,10 @@ const EasterEggs = () => {
                 "%c🤫 Pssttt...\n" +
                   "You've unlocked Level 1 of Jayant's secrets.\n" +
                   "But are you REALLY ready for Level 2?\n" +
-                  "😺 If you're a true cat person, just press %c'm'%c anywhere on the screen...\n" +
+                  "😺 If you're a true cat person, just press %c'M'%c anywhere on the screen...\n" +
                   "And brace yourself for... 🐾 Feline overload.",
                 "color: #FF69B4; font-size: 16px; font-weight: bold; background-color: black; padding: 8px; border-radius: 10px; margin-top: 8px",
-                "color: #00FF00; font-size:18px; font-weight: bolder;margin-top: 8px;background-color: white; padding: 6px; border-radius: 8px; margin-right:6px; margin-left:6px",
+                "color: #FFF; font-size:18px; font-weight: 800;margin-top: 8px;background-color: #305cde; padding: 6px; border-radius: 8px; margin-right:6px; margin-left:6px",
                 "color: #FF69B4; font-size: 16px; font-weight: bold; background-color: black; padding: 8px; border-radius: 10px; margin-top: 8px"
               );
               clearTimeout(timer);
