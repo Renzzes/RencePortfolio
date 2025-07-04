@@ -46,7 +46,7 @@ const EasterEggs = () => {
                 "color: #FF69B4; font-size: 16px; font-weight: bold; background-color: black; padding: 8px; border-radius: 10px; margin-top: 8px"
               );
               clearTimeout(timer);
-            }, 1000);
+            }, 7000);
             return "";
           },
         });
