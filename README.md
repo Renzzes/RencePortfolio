@@ -2,7 +2,8 @@
 
 Welcome to my immersive 3D portfolio website! This project showcases my skills, projects, and creativity through stunning 3D animations, interactive elements, and smooth motion design. Experience a cosmic journey through space-themed design with cutting-edge web technologies.
 
-![Portfolio Preview](https://raw.githubusercontent.com/Jayant-1/3D-Portfolio/refs/heads/main/public/assets/nav-link-previews/home.png?token=GHSAT0AAAAAADBVPFWGGTFGHPVSRGRWWB7E2DJDFGQ)
+![Portfolio Preview](https://github.com/Jayant-1/3D-Portfolio/blob/main/public/assets/nav-link-previews/home.png?raw=true)
+
 
 ## ✨ Features
 
