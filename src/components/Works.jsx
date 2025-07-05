@@ -7,6 +7,7 @@ import { projects } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
+import { words } from "../constants";
 
 const ProjectCard = ({
   index,
@@ -75,18 +76,41 @@ const Works = () => {
           <p className={`${styles.sectionSubText} `}>My work</p>
           <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
         </motion.div>
-
-        <div className="w-full flex">
-          <motion.p
+        <div className="hero-text">
+          <motion.span
             variants={fadeIn("", "", 0.1, 1)}
-            className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+            className="mt-3 text-secondary text-[30px] max-w-3xl leading-[50px]"
           >
-            Following projects showcases my skills and experience through
-            real-world examples of my work. Each project is briefly described
-            with links to code repositories and live demos in it. It reflects my
-            ability to solve complex problems, work with different technologies,
-            and manage projects effectively.
-          </motion.p>
+            <h1>
+              Shaping
+              <span className="slide pl-3">
+                <span className="wrapper">
+                  {words.map((word, index) => (
+                    <span
+                      key={index}
+                      className="flex items-center text-3xl md:gap-3 gap-1 pb-2"
+                    >
+                      <img
+                        src={word.imgPath}
+                        alt="person"
+                        className=" md:p-2 p-1 rounded-full bg-[#8ec5ff]"
+                      />
+                      <span 
+                        className="font-extrabold text-white" 
+                        style={{ 
+                          fontFamily: word.font, 
+                          textShadow: '0 0 4px #8ec5ff, 0 0 6px white' 
+                        }}
+                      >
+                        {word.text}
+                      </span>
+                    </span>
+                  ))}
+                </span>
+              </span>
+            </h1>
+            <h1>into Real Projects that Deliver Results</h1>
+          </motion.span>
         </div>
 
         <div className="mt-20 flex flex-wrap gap-7">

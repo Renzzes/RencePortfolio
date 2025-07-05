@@ -16,6 +16,11 @@ import novalearn from "./project/novalearn.png";
 import ponggame from "./project/ponggame.png";
 import portfolio from "./project/portfolio.png";
 
+import code from "./badge/code.svg";
+import concepts from "./badge/concepts.svg";
+import designs from "./badge/designs.svg";
+import ideas from "./badge/ideas.svg";
+
 export {
   ponggame,
   portfolio,
@@ -32,4 +37,8 @@ export {
   cp,
   fcc,
   novalearn,
+  ideas,
+  concepts,
+  designs,
+  code,
 };

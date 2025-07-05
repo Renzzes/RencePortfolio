@@ -32,6 +32,52 @@
   display: block;
 }
 
+.slide {
+  display: inline-block;
+  flex-direction: column;
+  transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
+}
+.hero-text {
+  @apply flex flex-col justify-center text-[32px] font-semibold relative z-10 pointer-events-none;
+}
+/* Override for hero-text slide */
+.hero-text .slide {
+  @apply absolute pt-0 py-[30px] h-[48px] md:translate-y-1 translate-y-0 overflow-hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+}
+
+@keyframes wordSlider {
+  0% {
+    transform: translateY(0.5%);
+  }
+  12.5% {
+    transform: translateY(-12.5%);
+  }
+  25% {
+    transform: translateY(-25%);
+  }
+  37.5% {
+    transform: translateY(-37.5%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  62.5% {
+    transform: translateY(-62.5%);
+  }
+  75% {
+    transform: translateY(-75%);
+  }
+  87.5% {
+    transform: translateY(-87.5%);
+  }
+}
+
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -141,6 +187,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
+
 
 /* canvas- styles */
 .canvas-loader {

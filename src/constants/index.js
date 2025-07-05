@@ -10,6 +10,10 @@ import {
   fcc,
   mobile,
   web,
+  ideas,
+  concepts,
+  designs,
+  code,
 } from "../assets";
 
 export const navLinks = [
@@ -152,7 +156,7 @@ const projects = [
         name: "Flask",
         color: "violet-text-gradient",
       },
-       {
+      {
         name: "sqlite3",
         color: "orange-text-gradient",
       },
@@ -177,7 +181,6 @@ const projects = [
         name: "JavaScript",
         color: "pink-text-gradient",
       },
-      
     ],
     image: ponggame,
     source_code_link: "https://github.com/Jayant-1/Multiplayer_Pong_Game",
@@ -213,4 +216,15 @@ const projects = [
   },
 ];
 
-export { achievements, projects, services, testimonials };
+const words = [
+  { text: "Ideas", imgPath: ideas, font: "Arial, sans-serif" },
+  { text: "Concepts", imgPath: concepts, font: "'Courier New', Courier, monospace" },
+  { text: "Designs", imgPath: designs, font: "'Times New Roman', Times, serif" },
+  { text: "Code", imgPath: code, font: "'Fira Mono', monospace" },
+  { text: "Ideas", imgPath: ideas, font: "'Comic Sans MS', cursive, sans-serif" },
+  { text: "Concepts", imgPath: concepts, font: "'Roboto', sans-serif" },
+  { text: "Designs", imgPath: designs, font: "'Georgia', serif" },
+  { text: "Code", imgPath: code, font: "'Source Code Pro', monospace" },
+];
+
+export { achievements, projects, services, testimonials, words };
