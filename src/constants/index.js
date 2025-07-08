@@ -167,7 +167,7 @@ const projects = [
   {
     name: "Multiplayer Pong Game",
     description:
-      "Multiplayer Pong Game with three modes: Play with a friend online, play side-by-side on the same screen, or challenge an AI opponent. Fast, fun, and competitive—classic Pong with modern multiplayer options! 🕹️🔥",
+      "Multiplayer Pong Game with three modes: Play with a friend online, play side-by-side on the same screen, or challenge an AI opponent. Fast, fun, and competitive — classic Pong with modern multiplayer options! 🕹️🔥",
     tags: [
       {
         name: "socket",
