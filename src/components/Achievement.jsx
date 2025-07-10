@@ -38,12 +38,12 @@ const AchievementCard = ({ Achievement }) => {
             ? Achievement.title.map((t, i) => <div key={i}>{t}</div>)
             : Achievement.title}
         </h3>
-        <p
+        {/* <p
           className="text-white text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
           {Achievement.company_name}
-        </p>
+        </p> */}
       </div>
 
       <ul className="mt-5 list-disc ml-5 space-y-2">

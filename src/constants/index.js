@@ -52,55 +52,56 @@ const services = [
 
 const achievements = [
   {
-    title: ["Responsive Web Design", "JavaScript"],
+    title: ["FreeCodeCamp"],
     company_name: "freeCodeCamp",
     icon: fcc,
     iconBg: "#383E56",
     date: "May 2024",
-    points: ["Credential ID: jayant-potdar-rwd"],
+    points: ["Responsive Web Design", "JavaScript"],
     credential: [
-      "https://freecodecamp.org/certification/Jayant-Potdar/responsive-web-design",
+      "https://freecodecamp.org/certification/Jayant-1/responsive-web-design",
+      "https://freecodecamp.org/certification/Jayant-1/responsive-web-design",
     ],
   },
   {
-    title: [
-      "Python (Basic) Certificate",
-      "SQL (Basic) Certificate",
-      "CSS (Basic) Certificate",
-    ],
+    title: ["HackerRank"],
     company_name: "HackerRank",
     icon: hr,
     iconBg: "#E6DEDD",
     date: "Apr 2025",
     points: [
-      "Credential ID: b011ba865ccf",
-      "Credential ID: 633d92ea00fe",
-      "Credential ID: 633d92ea00fe",
+      "Python (Basic) Certificate",
+      "SQL (Basic) Certificate",
+      "CSS (Basic) Certificate",
+      "Go (Basic) Certificate",
     ],
     credential: [
       "https://www.hackerrank.com/certificates/b011ba865ccf",
       "https://www.hackerrank.com/certificates/633d92ea00fe",
-      "https://www.hackerrank.com/certificates/633d92ea00fe",
+      "https://www.hackerrank.com/certificates/c9bfa3c0b9e7",
+      "https://www.hackerrank.com/certificates/b5ee5bc85229",
     ],
   },
   {
-    title: ["IT Specialist - HTML and CSS"],
+    title: ["Certiport"],
     company_name: "Certiport",
     icon: cp,
     iconBg: "#383E56",
     date: "Apr 2025",
-    points: ["Credential ID: c59ff7d1-7af2-4dcb-8c57-d2bd6a6d1f44"],
+    points: ["IT Specialist - HTML and CSS"],
     credential: [
       "https://www.credly.com/badges/c59ff7d1-7af2-4dcb-8c57-d2bd6a6d1f44/linked_in_profile",
     ],
   },
   {
-    title: ["Introduction to Software Engineering"],
+    title: ["IBM Full Stack Software Developer"],
     company_name: "IBM",
     icon: ibm,
     iconBg: "#E6DEDD",
     date: "Jun 2025",
-    points: ["Credential ID: XCJFA94Z1UQ2"],
+    points: [
+      "Introduction to Software Engineering",
+    ],
     credential: [
       "https://www.coursera.org/account/accomplishments/records/XCJFA94Z1UQ2",
     ],
@@ -218,10 +219,22 @@ const projects = [
 
 const words = [
   { text: "Ideas", imgPath: ideas, font: "Arial, sans-serif" },
-  { text: "Concepts", imgPath: concepts, font: "'Courier New', Courier, monospace" },
-  { text: "Designs", imgPath: designs, font: "'Times New Roman', Times, serif" },
+  {
+    text: "Concepts",
+    imgPath: concepts,
+    font: "'Courier New', Courier, monospace",
+  },
+  {
+    text: "Designs",
+    imgPath: designs,
+    font: "'Times New Roman', Times, serif",
+  },
   { text: "Code", imgPath: code, font: "'Fira Mono', monospace" },
-  { text: "Ideas", imgPath: ideas, font: "'Comic Sans MS', cursive, sans-serif" },
+  {
+    text: "Ideas",
+    imgPath: ideas,
+    font: "'Comic Sans MS', cursive, sans-serif",
+  },
   { text: "Concepts", imgPath: concepts, font: "'Roboto', sans-serif" },
   { text: "Designs", imgPath: designs, font: "'Georgia', serif" },
   { text: "Code", imgPath: code, font: "'Source Code Pro', monospace" },
