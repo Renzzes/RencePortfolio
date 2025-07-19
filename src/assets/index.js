@@ -7,7 +7,7 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import ibm from "./achievement/IBM.jpg";
+import coursera from "./achievement/Coursera.png";
 import hr from "./achievement/HR.jpg";
 import cp from "./achievement/Certiport.jpg";
 import fcc from "./achievement/free_code_camp.jpg";
@@ -32,7 +32,7 @@ export {
   github,
   menu,
   close,
-  ibm,
+  coursera,
   hr,
   cp,
   fcc,

@@ -4,7 +4,7 @@ import {
   portfolio,
   backend,
   creator,
-  ibm,
+  coursera,
   hr,
   cp,
   fcc,
@@ -94,16 +94,16 @@ const achievements = [
     ],
   },
   {
-    title: ["IBM Full Stack Software Developer"],
-    company_name: "IBM",
-    icon: ibm,
-    iconBg: "#E6DEDD",
-    date: "Jun 2025",
+    title: ["Coursera"],
+    company_name: "Coursera",
+    icon: coursera,
+    iconBg: "#0056d2",
+    date: "Jul 2025",
     points: [
-      "Introduction to Software Engineering",
+      "IBM Full Stack Software Developer",
     ],
     credential: [
-      "https://www.coursera.org/account/accomplishments/records/XCJFA94Z1UQ2",
+      "https://www.coursera.org/account/accomplishments/professional-cert/certificate/8R7RY7URFI6O",
     ],
   },
 ];
