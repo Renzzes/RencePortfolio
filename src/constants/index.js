@@ -103,7 +103,7 @@ const achievements = [
       "IBM Full Stack Software Developer",
     ],
     credential: [
-      "https://www.coursera.org/account/accomplishments/professional-cert/certificate/8R7RY7URFI6O",
+      "https://coursera.org/verify/professional-cert/8R7RY7URFI6O",
     ],
   },
 ];
