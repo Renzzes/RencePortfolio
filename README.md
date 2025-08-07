@@ -1,15 +1,14 @@
-# 🚀 3D Portfolio Website
+# 🚀 Renz Portfolio
 
 Welcome to my immersive 3D portfolio website! This project showcases my skills, projects, and creativity through stunning 3D animations, interactive elements, and smooth motion design. Experience a cosmic journey through space-themed design with cutting-edge web technologies.
 
-![Portfolio Preview](https://github.com/Jayant-1/3D-Portfolio/blob/main/public/assets/nav-link-previews/home.png?raw=true)
-
+![Portfolio Preview](./src/assets/portfolio.png)
 
 ## ✨ Features
 
 ### 🎮 Interactive 3D Elements
 
-- **Custom 3D Keyboard**: Interactive Spline-powered keyboard with skills as keycaps that reveal titles and descriptions on hover
+- **Modern Desktop Setup**: Interactive 3D model of my personal workstation with RGB lighting
 - **3D Models**: Desktop PC, Earth, and other 3D assets using Three.js and React Three Fiber
 - **Particle Systems**: Dynamic star field background creating an immersive space environment
 - **Elastic Cursor**: Custom cursor with physics-based animations for enhanced interactivity
@@ -83,8 +82,8 @@ Welcome to my immersive 3D portfolio website! This project showcases my skills, 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Jayant-1/3D-Portfolio.git
-   cd 3d-portfolio
+   git clone https://github.com/Renzzes/RencePortfolio.git
+   cd RencePortfolio
    ```
 
 2. **Install dependencies:**
@@ -141,7 +140,6 @@ src/
 │   ├── Feedbacks.jsx
 │   ├── Hero.jsx
 │   ├── Navbar.jsx
-│   ├── SkillKeyboard.jsx
 │   └── Works.jsx
 ├── assets/            # Static assets
 │   ├── achievement/   # Achievement images
@@ -220,10 +218,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Portfolio**: [https://jayant-1.vercel.app/]
-- **GitHub**: [@Jayant-1](https://github.com/Jayant-1)
-- **LinkedIn**: [Jayant Potdar](https://www.linkedin.com/in/jayant-potdar-880a461b8/)
-- **Email**: jayantpotdar2006@gmail.com
+- **GitHub**: [@Renzzes](https://github.com/Renzzes)
 
 ---
 
