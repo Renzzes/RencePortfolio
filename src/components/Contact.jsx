@@ -1,6 +1,7 @@
-import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
+import useWeb3Forms from "@web3forms/react";
+import githubIcon from "../assets/social/github.svg";
 
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
@@ -34,6 +35,38 @@ const Contact = () => {
     });
   };
 
+  const { submit } = useWeb3Forms({
+    access_key: "af1d3603-c8c7-417e-8ae5-6328a5e43808",
+    settings: {
+      from_name: "3D Portfolio Contact Form",
+      subject: "New Contact Message from Portfolio Website",
+    },
+    onSuccess: (message, data) => {
+      setLoading(false);
+      soundEffects.playNotification();
+      setToast({
+        open: true,
+        message: "Thank you. I will get back to you as soon as possible.",
+        type: "success",
+      });
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+    },
+    onError: (message, data) => {
+      setLoading(false);
+      console.error(message);
+      soundEffects.playNotification();
+      setToast({
+        open: true,
+        message: "Ahh, something went wrong. Please try again.",
+        type: "error",
+      });
+    },
+  });
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Validate form fields
@@ -48,62 +81,11 @@ const Contact = () => {
     }
     setLoading(true);
 
-    // Check if EmailJS environment variables are configured
-    const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
-
-    if (!serviceId || !templateId || !publicKey) {
-      setLoading(false);
-      soundEffects.playNotification();
-      setToast({
-        open: true,
-        message:
-          "EmailJS configuration is missing. Please check your environment variables.",
-        type: "error",
-      });
-      return;
-    }
-
-    emailjs
-      .send(
-        serviceId,
-        templateId,
-        {
-          user_name: form.name,
-          my_name: "Jayant Potdar",
-          user_email: form.email,
-          my_email: "jayantpotdar2006@gmail.com",
-          user_message: form.message,
-        },
-        publicKey
-      )
-      .then(
-        () => {
-          setLoading(false);
-          soundEffects.playNotification();
-          setToast({
-            open: true,
-            message: "Thank you. I will get back to you as soon as possible.",
-            type: "success",
-          });
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-          soundEffects.playNotification();
-          setToast({
-            open: true,
-            message: "Ahh, something went wrong. Please try again.",
-            type: "error",
-          });
-        }
-      );
+    submit({
+      name: form.name,
+      email: form.email,
+      message: form.message,
+    });
   };
 
   return (
@@ -178,6 +160,18 @@ const Contact = () => {
                   className="bg-[#07080d] py-3 sm:py-4 px-4 sm:px-6 placeholder:text-[#fafafa8a] rounded-lg outline-none border-none font-medium text-sm sm:text-base w-full resize-none"
                 />
               </label>
+
+              <div className="flex items-center gap-4 mt-2">
+                <a
+                  href="https://github.com/Renzzes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-[#07080d] rounded-full flex items-center justify-center shadow-md hover:bg-[#0a0b12] transition-colors duration-200"
+                >
+                  <img src={githubIcon} alt="GitHub" className="w-6 h-6" />
+                </a>
+                <span className="text-sm text-[#fafafa8a]">Check out my GitHub profile</span>
+              </div>
 
               <button
                 type="submit"

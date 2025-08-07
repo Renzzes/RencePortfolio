@@ -7,33 +7,82 @@ import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[255px] w-full">
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-[#111522] rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img
-          src={icon}
-          alt="web-development"
-          className="w-16 h-16 object-contain"
-        />
+const ServiceCard = ({ title, description, index }) => {
+  const cardRef = React.useRef(null);
+   const borderColors = [
+     { from: '#ff0055', to: '#ff0055' }, // Red
+     { from: '#ffaa00', to: '#ffaa00' }, // Gold
+     { from: '#00ffff', to: '#00ffff' }  // Cyan
+   ];
+   const color = borderColors[index % 3];
 
-        <h3 className="text-white text-[20px] font-bold text-center">
-          {title}
-        </h3>
+   React.useEffect(() => {
+     const card = cardRef.current;
+     if (!card) return;
+
+     const keyframes = `
+       @keyframes border-dance-${index} {
+         0% { background-position: 0% 0%; }
+         12.5% { background-position: 100% 0%; }
+         25% { background-position: 100% 0%; }
+         37.5% { background-position: 100% 100%; }
+         50% { background-position: 100% 100%; }
+         62.5% { background-position: 0% 100%; }
+         75% { background-position: 0% 100%; }
+         87.5% { background-position: 0% 0%; }
+         100% { background-position: 0% 0%; }
+       }
+     `;
+
+     const styleSheet = document.createElement('style');
+     styleSheet.textContent = keyframes;
+     document.head.appendChild(styleSheet);
+
+     return () => {
+       document.head.removeChild(styleSheet);
+     };
+   }, [index]);
+
+  return (
+    <motion.div 
+      ref={cardRef}
+      className="flex-none w-72 relative overflow-hidden group"
+      whileHover={{ scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+    >
+      <div 
+        className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300" 
+        style={{ 
+          background: `linear-gradient(90deg, transparent 0%, ${color.from} 15%, ${color.from} 85%, transparent 100%)`,
+            backgroundSize: '400% 400%',
+            animation: `border-dance-${index} 8s linear infinite`,
+            padding: '2px'
+        }}
+      >
+        <div className="h-full w-full bg-[#0a0a0a] rounded-lg relative p-6">
+          <div className="flex flex-col items-center justify-center space-y-4">
+            <div style={{ color: color.from }} className="text-3xl mb-2">
+              {title}
+            </div>
+            <p className="text-gray-400 text-center text-sm">
+              {description}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="rounded-lg bg-[#0a0a0a] p-6">
+        <div className="flex flex-col items-center justify-center space-y-4">
+          <div className="text-white text-3xl mb-2">
+            {title}
+          </div>
+          <p className="text-gray-400 text-center text-sm">
+            {description}
+          </p>
+        </div>
       </div>
     </motion.div>
-  </Tilt>
-);
+  );
+};
 
 const About = () => {
   return (
@@ -47,27 +96,42 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a Jayant Sunil Potdar. A Full Stack Web developer with experience in
+        I'm a Clarence Emmanuel Jamora. A Full Stack Web developer with experience in
         HTML, CSS, and JavaScript, and expertise in frameworks like React, and
-        Bootstrap. I'm a quick learner and to create efficient, scalable, and
-        user-friendly solutions that solve real-world problems. Let's work
-        together to bring our ideas to life!
+        Bootstrap. I;m passionate about creating reliable, scalable, and user-foucsed digital solutions. 
+        In addition to web development, I have practical experience during internship in maintaining and troubleshooting
+        computer hardware and systems. I'm always eager to collaborate and turn meaningful ideas into reality.
       </motion.p>
       <button
         className="mt-10 px-6 py-3 text-white bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-md shadow-md hover:bg-gradient-to-r hover:from-cyan-600 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
         onClick={() =>
           window.open(
-            "https://drive.google.com/file/d/1vrYWFpb_OlY7BgEEc5-ehsHI922j3Zye/view?usp=sharing",
+            "https://drive.google.com/file/d/1AYPv9B8zF6C-EGL3YfJMPhmXMjrL60ld/view?usp=sharing",
             "_blank"
           )
         }
       >
         <span className="font-semibold flex gap-1.5 items-center"><RiBriefcase4Fill />Download Resume</span>
       </button>
-      <div className="mt-12 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+      <div className="mt-12 w-full overflow-hidden">
+        <motion.div 
+          className="flex gap-6"
+          animate={{
+            x: ["-50%", "0%"],
+          }}
+          transition={{
+            x: {
+              duration: 20,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "linear",
+            },
+          }}
+        >
+          {[...services, ...services, ...services].map((service, index) => (
+            <ServiceCard key={`${service.title}-${index}`} {...service} index={index} />
+          ))}
+        </motion.div>
       </div>
     </>
   );

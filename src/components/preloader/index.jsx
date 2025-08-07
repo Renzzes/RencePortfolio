@@ -20,7 +20,7 @@ export const usePreloader = () => {
   return context;
 };
 
-const LOADING_TIME = 2.5;
+const LOADING_TIME = 12; // Increased to allow for longer animations and delays
 
 function Preloader({ children, disabled = false }) {
   const [isLoading, setIsLoading] = useState(true);

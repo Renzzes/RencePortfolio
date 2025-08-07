@@ -13,7 +13,8 @@ import {
 } from "./components";
 import EasterEggs from "./components/EasterEggs";
 import ElasticCursor from "./components/ElasticCursor";
-import SkillKeyboard from "./components/SkillKeyboard";
+import FloatingHireMe from "./components/ui/FloatingHireMe";
+
 
 const App = () => {
   return (
@@ -32,12 +33,13 @@ const App = () => {
           <StarsCanvas />
           <About />
           <Achievement />
-          <SkillKeyboard />
+
           <Works />
           <Feedbacks />
           <div className="relative z-0">
             <Contact />
           </div>
+          <FloatingHireMe />
         </div>
       </BrowserRouter>
     </Preloader>

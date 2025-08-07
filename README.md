@@ -31,7 +31,6 @@ Welcome to my immersive 3D portfolio website! This project showcases my skills, 
 
 - **Hero**: Eye-catching introduction with 3D elements
 - **About**: Personal story and background
-- **Skills**: Interactive 3D keyboard showcasing technical skills
 - **Projects**: Portfolio of work with 3D project cards
 - **Achievements**: Timeline of accomplishments and certifications
 - **Contact**: Interactive contact form with 3D elements

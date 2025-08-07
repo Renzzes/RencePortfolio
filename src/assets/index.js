@@ -1,4 +1,3 @@
-import logo from "./logo.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -7,24 +6,13 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import coursera from "./achievement/Coursera.png";
-import hr from "./achievement/HR.jpg";
-import cp from "./achievement/Certiport.jpg";
-import fcc from "./achievement/free_code_camp.jpg";
+// Achievement imports are not needed as we're using direct paths in constants/index.js
 
-import novalearn from "./project/novalearn.png";
-import ponggame from "./project/ponggame.png";
-import portfolio from "./project/portfolio.png";
+// Project images are referenced directly in constants/index.js
 
-import code from "./badge/code.svg";
-import concepts from "./badge/concepts.svg";
-import designs from "./badge/designs.svg";
-import ideas from "./badge/ideas.svg";
+// Badge imports and exports removed - files not found
 
 export {
-  ponggame,
-  portfolio,
-  logo,
   backend,
   creator,
   mobile,
@@ -32,13 +20,4 @@ export {
   github,
   menu,
   close,
-  coursera,
-  hr,
-  cp,
-  fcc,
-  novalearn,
-  ideas,
-  concepts,
-  designs,
-  code,
 };

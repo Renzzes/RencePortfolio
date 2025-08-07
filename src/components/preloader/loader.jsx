@@ -1,95 +1,97 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { opacity, slideUp } from "./anim";
+import { useEffect, useRef } from "react";
 import { usePreloader } from "./index";
 import styles from "./style.module.css";
-
-const steps = [
-  "10%",
-  "20%",
-  "30%",
-  "40%",
-  "50%",
-  "60%",
-  "70%",
-  "80%",
-  "90%",
-  "100%",
-];
+import gsap from "gsap";
 
 export default function Loader() {
-  const { isLoading, loadingPercent } = usePreloader();
-  const [index, setIndex] = useState(0);
-  const [dimension, setDimension] = useState({ width: 0, height: 0 });
-
-  useEffect(() => {
-    setDimension({ width: window.innerWidth, height: window.innerHeight });
-  }, []);
-
-  useEffect(() => {
-    if (index == steps.length - 1) return;
-    setTimeout(
-      () => {
-        setIndex(index + 1);
-      },
-      index == 0 ? 1000 : 150
-    );
-  }, [index]);
-
-  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
-    dimension.height
-  } Q${dimension.width / 2} ${dimension.height + 300} 0 ${
-    dimension.height
-  }  L0 0`;
-  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
-    dimension.height
-  } Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`;
-
-  const curve = {
-    initial: {
-      d: initialPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] },
-    },
-    exit: {
-      d: targetPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3 },
-    },
-  };
-
   const { bypassLoading } = usePreloader();
+  const logoTextRef = useRef(null);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    // Initial setup
+    gsap.set(logoTextRef.current, {
+      opacity: 0
+    });
+
+    // Fade in the container with longer duration
+    tl.to(containerRef.current, {
+      opacity: 1,
+      duration: 2,
+      ease: 'power2.out'
+    })
+    
+    // Add longer delay before starting text animation
+    .to({}, { duration: 1.5 })
+    
+    // Fade in and animate logo text with smooth typewriter effect
+    .to(logoTextRef.current, {
+      opacity: 1,
+      duration: 0.5,
+      ease: 'power2.out'
+    })
+    .to(logoTextRef.current, {
+      duration: 4,
+      ease: 'steps(15)',
+      onUpdate: () => {
+        const progress = tl.progress();
+        const fullText = '<> Hello,...Renz';
+        const currentLength = Math.floor(progress * fullText.length);
+        const text = fullText.slice(0, currentLength);
+        const cursorChar = Math.floor(Date.now() / 500) % 2 === 0 ? '|' : '';
+        logoTextRef.current.textContent = text + (currentLength < fullText.length ? cursorChar : '');
+      },
+      onComplete: () => {
+        // Start cursor blinking after typing is complete
+        const blinkCursor = () => {
+          if (logoTextRef.current) {
+            const cursorChar = Math.floor(Date.now() / 500) % 2 === 0 ? '|' : '';
+            logoTextRef.current.textContent = '<> Hello,...Renz' + cursorChar;
+          }
+        };
+        const blinkInterval = setInterval(blinkCursor, 50);
+        // Clean up interval when component unmounts
+        return () => clearInterval(blinkInterval);
+      }
+    })
+    
+    // Add longer delay after typing animation
+    .to({}, { duration: 7 });
+
+    return () => tl.kill();
+  }, []);
 
   return (
     <motion.div
-      variants={slideUp}
-      initial="initial"
-      exit="exit"
+      ref={containerRef}
+      initial={{ opacity: 1 }}
+      exit={{ 
+        opacity: 0,
+        scale: 1.1,
+        transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] }
+      }}
       className={styles.introduction}
       onClick={bypassLoading}
       style={{ cursor: "pointer" }}
     >
-      {dimension.width > 0 && (
-        <>
-          <motion.p variants={opacity} initial="initial" animate="enter">
-            {(loadingPercent - (loadingPercent % 5)).toFixed(0)} %
-          </motion.p>
-          <motion.div
-            className={styles.skipHint}
-            variants={opacity}
-            initial="initial"
-            animate="enter"
-            transition={{ delay: 1 }}
-          >
-            Click or press any key to skip
-          </motion.div>
-          <svg>
-            <motion.path
-              variants={curve}
-              initial="initial"
-              exit="exit"
-            ></motion.path>
-          </svg>
-        </>
-      )}
+      <div className="relative flex flex-col items-center justify-center min-h-screen">
+        <span
+          ref={logoTextRef}
+          className="mb-8 text-4xl md:text-6xl font-bold text-white font-mono"
+        ></span>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5 }}
+          className="mt-8 text-sm text-gray-400"
+        >
+          Click or press any key to skip
+        </motion.div>
+      </div>
     </motion.div>
   );
 }

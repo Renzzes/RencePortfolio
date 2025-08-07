@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
-  const typedItems = ["Developer", "Freelancer", "Designer", "Learner"];
+  const typedItems = ["Computer Engineer", "Freelancer", "Web Developer", "Tech Enthusiast"];
   const [itemIndex, setItemIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
@@ -44,7 +44,7 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">Jayant Potdar</span>
+            Hi, I'm <span className="text-[#915EFF]">Clarence</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I'm{" "}
