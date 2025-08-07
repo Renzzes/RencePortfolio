@@ -2,7 +2,7 @@
 
 Welcome to my immersive 3D portfolio website! This project showcases my skills, projects, and creativity through stunning 3D animations, interactive elements, and smooth motion design. Experience a cosmic journey through space-themed design with cutting-edge web technologies.
 
-![Portfolio Preview](./src/assets/portfolio.png)
+![Portfolio Preview](./src/assets/forReadMe.png)
 
 ## ✨ Features
 
