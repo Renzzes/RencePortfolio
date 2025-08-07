@@ -137,69 +137,150 @@ const experiences = [
     date: "2024",
     description: "Successfully completed Bachelor of Science in Computer Engineering with honors, gaining comprehensive knowledge in both hardware and software domains.",
     points: [
-      "Graduated with Honorable Mention (GPA: 4.1) from Cebu Institute of Technology – University",
-      "Strong foundation in computer systems, hardware troubleshooting, and embedded technologies",
-      "Completed academic and hands-on training in software development, frontend web technologies, and system maintenance",
-      "Led a capstone project focused on smart systems, integrating both hardware and software solutions",
-      "Gained real-world IT support experience through internship—handling desktop, printer, and network troubleshooting",
-      "Continuously learning modern web development tools and practices, including React, Tailwind, and TypeScript"
+      "Graduated with honors",
+      "Specialized in computer systems and architecture",
+      "Completed advanced programming courses",
+      "Led team projects in software development",
+      "Participated in tech competitions"
     ],
-    tags: ["Computer Engineering", "Honorable Mention", "System Design", "Programming", "Leadership"],
+    tags: ["Computer Engineering", "Academic Excellence", "Leadership", "Technical Skills", "Team Projects"],
   },
   {
-    title: "IT Technical Support Intern",
+    title: "IT Support Intern",
     company_name: "Radisson Blu Hotel Cebu",
     icon: "/assets/radisson.png",
-    iconBg: "#01579b",
+    iconBg: "#e3f2fd",
     date: "2023",
-    description: "Gained hands-on experience in IT support and system maintenance during a 2-month internship at a prestigious international hotel chain.",
+    description: "Gained hands-on experience in IT support and network management at a prestigious international hotel chain.",
     points: [
-      "Provided technical support for hotel management systems",
-      "Maintained and troubleshot network infrastructure",
-      "Assisted in hardware and software installations",
-      "Documented technical procedures and solutions",
-      "Collaborated with various departments for IT needs"
+      "Provided technical support to hotel staff",
+      "Maintained computer systems and networks",
+      "Assisted in hardware and software troubleshooting",
+      "Documented IT procedures and solutions",
+      "Collaborated with the IT team on system upgrades"
     ],
     tags: ["Technical Support", "Networking", "Hardware", "Troubleshooting", "Customer Service"],
     images: [
-      "src/assets/OJT/1.jpg",
-      "src/assets/OJT/2.jpg",
-      "src/assets/OJT/3.jpg",
-      "src/assets/OJT/4.jpg",
-      "src/assets/OJT/5.jpg",
-      "src/assets/OJT/6.jpg",
-      "src/assets/OJT/7.jpg",
-      "src/assets/OJT/8.jpg",
-      "src/assets/OJT/9.jpg",
-      "src/assets/OJT/10.jpg",
-      "src/assets/OJT/11.jpg",
-      "src/assets/OJT/12.jpg",
-      "src/assets/OJT/13.jpg",
-      "src/assets/OJT/15.jpg",
-      "src/assets/OJT/16.jpg",
-      "src/assets/OJT/17.jpg",
-      "src/assets/OJT/18.jpg",
-      "src/assets/OJT/19.jpg",
-      "src/assets/OJT/20.jpg",
-      "src/assets/OJT/21.jpg"
+      "/assets/OJT/1.jpg",
+      "/assets/OJT/2.jpg",
+      "/assets/OJT/3.jpg",
+      "/assets/OJT/4.jpg",
+      "/assets/OJT/5.jpg",
+      "/assets/OJT/6.jpg",
+      "/assets/OJT/7.jpg",
+      "/assets/OJT/8.jpg",
+      "/assets/OJT/9.jpg",
+      "/assets/OJT/10.jpg",
+      "/assets/OJT/11.jpg",
+      "/assets/OJT/12.jpg",
+      "/assets/OJT/13.jpg",
+      "/assets/OJT/15.jpg",
+      "/assets/OJT/16.jpg",
+      "/assets/OJT/17.jpg",
+      "/assets/OJT/18.jpg",
+      "/assets/OJT/19.jpg",
+      "/assets/OJT/20.jpg",
+      "/assets/OJT/21.jpg"
     ]
+  }
+];
+
+const projects = [
+  {
+    name: "MACOR BLENDZ",
+    description: "A sleek, responsive barbershop website showcasing premium grooming services with modern aesthetics and smooth user interactions. Features include an animated typewriter effect, interactive service cards, and Framer Motion animations.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Framer Motion",
+        color: "violet-text-gradient",
+      },
+    ],
+    images: [
+      "/assets/MACORBLENDZ/1.png",
+      "/assets/MACORBLENDZ/2.png",
+      "/assets/MACORBLENDZ/3.png",
+      "/assets/MACORBLENDZ/4.png",
+      "/assets/MACORBLENDZ/5.png",
+      "/assets/MACORBLENDZ/6.png",
+      "/assets/MACORBLENDZ/7.png"
+    ],
+    source_code_link: "https://github.com/Renzzes/blendz-modern-cuts",
+    live_demo_link: "https://blendz-modern-cuts.vercel.app"
   },
   {
-    title: "Started Computer Engineering Journey",
-    company_name: "Cebu Institute of Technology – University",
-    icon: "/assets/cit.png",
-    iconBg: "#4a148c",
-    date: "2021",
-    description: "Started my Computer Engineering journey at Cebu Institute of Technology – University, discovering my passion for both hardware and software.",
-    points: [
-      "Built foundation in computer hardware",
-      "Learned programming fundamentals",
-      "Explored system architecture",
-      "Developed problem-solving skills",
-      "Joined tech-focused student organizations"
+    name: "Almira May's Caffeine Bloom",
+    description: "A modern, responsive coffee shop website providing an engaging digital experience for coffee enthusiasts. Features interactive animations, smooth scrolling effects, toast notifications, and carousel functionality.",
+    tags: [
+      {
+        name: "React 19",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Vite",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Tailwind",
+        color: "pink-text-gradient",
+      },
     ],
-    tags: ["Computer Engineering", "Programming", "Hardware", "Software", "Academic Excellence"],
+    images: [
+      "/assets/Almira May's Caffeine Bloom/A.png",
+      "/assets/Almira May's Caffeine Bloom/B.png",
+      "/assets/Almira May's Caffeine Bloom/C.png",
+      "/assets/Almira May's Caffeine Bloom/D.png",
+      "/assets/Almira May's Caffeine Bloom/E.png",
+      "/assets/Almira May's Caffeine Bloom/F.png"
+    ],
+    source_code_link: "https://github.com/Renzzes/CoffeeShop",
+    live_demo_link: "https://coffee-shop-seven-psi.vercel.app"
   },
+  {
+    name: "AdobePeak",
+    description: "A modern real estate platform with comprehensive tools including property search & filtering, market intelligence dashboard, mortgage calculator, agent network, and interactive chat assistant.",
+    tags: [
+      {
+        name: "TailwindCSS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Chart.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Framer Motion",
+        color: "violet-text-gradient",
+      },
+    ],
+    images: [
+      "/assets/AdobePeak/12.png",
+      "/assets/AdobePeak/13.png",
+      "/assets/AdobePeak/14.png",
+      "/assets/AdobePeak/15.png",
+      "/assets/AdobePeak/16.png",
+      "/assets/AdobePeak/17.png",
+      "/assets/AdobePeak/18.png",
+      "/assets/AdobePeak/19.png"
+    ],
+    source_code_link: "https://github.com/Renzzes/EmergingProject",
+    live_demo_link: "https://emerging-project-one.vercel.app"
+  }
 ];
 
 const testimonials = [
@@ -251,104 +332,6 @@ const testimonials = [
     company: "Capstone Project",
     image: "https://api.dicebear.com/7.x/personas/svg?seed=StephanieCortes&backgroundColor=ffdfbf&radius=50",
   },
-];
-
-const projects = [
-  {
-    name: "MACOR BLENDZ",
-    description: "A sleek, responsive barbershop website showcasing premium grooming services with modern aesthetics and smooth user interactions. Features include an animated typewriter effect, interactive service cards, and Framer Motion animations.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "TypeScript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Framer Motion",
-        color: "violet-text-gradient",
-      },
-    ],
-    images: [
-      "src/assets/MACORBLENDZ/1.png",
-      "src/assets/MACORBLENDZ/2.png",
-      "src/assets/MACORBLENDZ/3.png",
-      "src/assets/MACORBLENDZ/4.png",
-      "src/assets/MACORBLENDZ/5.png",
-      "src/assets/MACORBLENDZ/6.png",
-      "src/assets/MACORBLENDZ/7.png"
-    ],
-    source_code_link: "https://github.com/Renzzes/blendz-modern-cuts",
-    live_demo_link: "https://blendz-modern-cuts.vercel.app"
-  },
-  {
-    name: "Almira May's Caffeine Bloom",
-    description: "A modern, responsive coffee shop website providing an engaging digital experience for coffee enthusiasts. Features interactive animations, smooth scrolling effects, toast notifications, and carousel functionality.",
-    tags: [
-      {
-        name: "React 19",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Vite",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    images: [
-      "src/assets/Almira May's Caffeine Bloom/A.png",
-      "src/assets/Almira May's Caffeine Bloom/B.png",
-      "src/assets/Almira May's Caffeine Bloom/C.png",
-      "src/assets/Almira May's Caffeine Bloom/D.png",
-      "src/assets/Almira May's Caffeine Bloom/E.png",
-      "src/assets/Almira May's Caffeine Bloom/F.png"
-    ],
-    source_code_link: "https://github.com/Renzzes/CoffeeShop",
-    live_demo_link: "https://coffee-shop-seven-psi.vercel.app"
-  },
-  {
-    name: "AdobePeak",
-    description: "A modern real estate platform with comprehensive tools including property search & filtering, market intelligence dashboard, mortgage calculator, agent network, and interactive chat assistant.",
-    tags: [
-      {
-        name: "TailwindCSS",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Node.js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Chart.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Framer Motion",
-        color: "violet-text-gradient",
-      },
-    ],
-    images: [
-      "src/assets/AdobePeak/12.png",
-      "src/assets/AdobePeak/13.png",
-      "src/assets/AdobePeak/14.png",
-      "src/assets/AdobePeak/15.png",
-      "src/assets/AdobePeak/16.png",
-      "src/assets/AdobePeak/17.png",
-      "src/assets/AdobePeak/18.png",
-      "src/assets/AdobePeak/19.png"
-    ],
-    source_code_link: "https://github.com/Renzzes/EmergingProject",
-    live_demo_link: "https://emerging-project-one.vercel.app"
-  }
 ];
 
 export { achievements, experiences, projects, services, testimonials };
