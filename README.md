@@ -3,7 +3,7 @@
 Welcome to my immersive 3D portfolio website! This project showcases my skills, projects, and creativity through stunning 3D animations, interactive elements, and smooth motion design. Experience a cosmic journey through space-themed design with cutting-edge web technologies.
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Renzzes/RencePortfolio/main/src/assets/forReadMe.png" alt="Portfolio Preview" width="100%">
+  <img src="https://raw.githubusercontent.com/Renzzes/RencePortfolio/main/src/assets/forReadMe.png" alt="Portfolio Preview" style="max-width: 100%; height: auto;">
 </div>
 
 ## ✨ Features
