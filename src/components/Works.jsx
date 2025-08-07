@@ -9,10 +9,10 @@ import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const words = [
-  { text: "Ideas", imgPath: "src/assets/badge/ideas.svg", font: "Poppins" },
-  { text: "Concepts", imgPath: "src/assets/badge/concepts.svg", font: "Roboto" },
-  { text: "Designs", imgPath: "src/assets/badge/designs.svg", font: "Montserrat" },
-  { text: "Code", imgPath: "src/assets/badge/code.svg", font: "Source Code Pro" }
+  { text: "Ideas", imgPath: "/assets/badge/ideas.svg", font: "Poppins" },
+  { text: "Concepts", imgPath: "/assets/badge/concepts.svg", font: "Roboto" },
+  { text: "Designs", imgPath: "/assets/badge/designs.svg", font: "Montserrat" },
+  { text: "Code", imgPath: "/assets/badge/code.svg", font: "Source Code Pro" }
 ];
 
 const ProjectCard = ({

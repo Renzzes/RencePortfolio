@@ -137,27 +137,28 @@ const experiences = [
     date: "2024",
     description: "Successfully completed Bachelor of Science in Computer Engineering with honors, gaining comprehensive knowledge in both hardware and software domains.",
     points: [
-      "Graduated with honors",
-      "Specialized in computer systems and architecture",
-      "Completed advanced programming courses",
-      "Led team projects in software development",
-      "Participated in tech competitions"
+      "Graduated with Honorable Mention (GPA: 4.1) from Cebu Institute of Technology – University",
+      "Strong foundation in computer systems, hardware troubleshooting, and embedded technologies",
+      "Completed academic and hands-on training in software development, frontend web technologies, and system maintenance",
+      "Led a capstone project focused on smart systems, integrating both hardware and software solutions",
+      "Gained real-world IT support experience through internship—handling desktop, printer, and network troubleshooting",
+      "Continuously learning modern web development tools and practices, including React, Tailwind, and TypeScript"
     ],
-    tags: ["Computer Engineering", "Academic Excellence", "Leadership", "Technical Skills", "Team Projects"],
+    tags: ["Computer Engineering", "Honorable Mention", "System Design", "Programming", "Leadership"],
   },
   {
-    title: "IT Support Intern",
+    title: "IT Technical Support Intern",
     company_name: "Radisson Blu Hotel Cebu",
     icon: "/assets/radisson.png",
-    iconBg: "#e3f2fd",
+    iconBg: "#01579b",
     date: "2023",
-    description: "Gained hands-on experience in IT support and network management at a prestigious international hotel chain.",
+    description: "Gained hands-on experience in IT support and system maintenance during a 2-month internship at a prestigious international hotel chain.",
     points: [
-      "Provided technical support to hotel staff",
-      "Maintained computer systems and networks",
-      "Assisted in hardware and software troubleshooting",
-      "Documented IT procedures and solutions",
-      "Collaborated with the IT team on system upgrades"
+      "Provided technical support for hotel management systems",
+      "Maintained and troubleshot network infrastructure",
+      "Assisted in hardware and software installations",
+      "Documented technical procedures and solutions",
+      "Collaborated with various departments for IT needs"
     ],
     tags: ["Technical Support", "Networking", "Hardware", "Troubleshooting", "Customer Service"],
     images: [
@@ -182,7 +183,74 @@ const experiences = [
       "/assets/OJT/20.jpg",
       "/assets/OJT/21.jpg"
     ]
-  }
+  },
+  {
+    title: "Started Computer Engineering Journey",
+    company_name: "Cebu Institute of Technology – University",
+    icon: "/assets/cit.png",
+    iconBg: "#4a148c",
+    date: "2021",
+    description: "Started my Computer Engineering journey at Cebu Institute of Technology – University, discovering my passion for both hardware and software.",
+    points: [
+      "Built foundation in computer hardware",
+      "Learned programming fundamentals",
+      "Explored system architecture",
+      "Developed problem-solving skills",
+      "Joined tech-focused student organizations"
+    ],
+    tags: ["Computer Engineering", "Programming", "Hardware", "Software", "Academic Excellence"],
+  },
+];
+
+const testimonials = [
+  {
+    testimonial:
+      "Clarence has shown a commendable willingness to learn the technicalities of the assigned task. The quality of work is consistently above average. He completes tasks safely and accurately, showcasing competence. His ability to understand and execute tasks effectively has been a notable asset to the IT team.",
+    name: "IT Department",
+    designation: "Internship Feedback",
+    company: "Radisson Blu Hotel Cebu",
+    image: "/assets/radisson.png",
+  },
+  {
+    testimonial:
+      "Clarence has consistently demonstrated initiative and skill in every project we've worked on together. He isn't afraid to try new tools and commits himself fully to the team's goals.",
+    name: "Engr. Arvin Getuaban",
+    designation: "Peer Feedback",
+    company: "Web Development Projects",
+    image: "https://api.dicebear.com/7.x/personas/svg?seed=ArvinGetuaban&backgroundColor=b6e3f4&radius=50",
+  },
+  {
+    testimonial:
+      "Dependable and hardworking, Clarence always comes through when the team needs him. His growth in web development has been outstanding.",
+    name: "Jayco Belle Punay",
+    designation: "Peer Feedback",
+    company: "Web Development Projects",
+    image: "https://api.dicebear.com/7.x/personas/svg?seed=JaycoPunay&backgroundColor=ffdfbf&radius=50",
+  },
+  {
+    testimonial:
+      "Clarence's attention to detail and problem-solving mindset have made him a strong asset in every project we've collaborated on.",
+    name: "Mark Cuizon",
+    designation: "Peer Feedback",
+    company: "Web Development Projects",
+    image: "https://api.dicebear.com/7.x/personas/svg?seed=MarkCuizon&backgroundColor=c0aede&radius=50",
+  },
+  {
+    testimonial:
+      "Clarence doesn't just code—he collaborates. He knows how to bring people together to build solutions that work.",
+    name: "Borje Marlon Limbago",
+    designation: "Peer Feedback",
+    company: "Web Development Projects",
+    image: "https://api.dicebear.com/7.x/personas/svg?seed=BorjeLimbago&backgroundColor=b6e3f4&radius=50",
+  },
+  {
+    testimonial:
+      "Clarence stood out as a dependable and technically capable student. His contributions during their capstone project reflected leadership, commitment, and an eagerness to improve. I believe he has great potential in both hardware and software fields.",
+    name: "Stephanie Grace Cortes",
+    designation: "Capstone Adviser",
+    company: "Capstone Project",
+    image: "https://api.dicebear.com/7.x/personas/svg?seed=StephanieCortes&backgroundColor=ffdfbf&radius=50",
+  },
 ];
 
 const projects = [
@@ -281,57 +349,6 @@ const projects = [
     source_code_link: "https://github.com/Renzzes/EmergingProject",
     live_demo_link: "https://emerging-project-one.vercel.app"
   }
-];
-
-const testimonials = [
-  {
-    testimonial:
-      "Clarence has shown a commendable willingness to learn the technicalities of the assigned task. The quality of work is consistently above average. He completes tasks safely and accurately, showcasing competence. His ability to understand and execute tasks effectively has been a notable asset to the IT team.",
-    name: "IT Department",
-    designation: "Internship Feedback",
-    company: "Radisson Blu Hotel Cebu",
-    image: "/assets/radisson.png",
-  },
-  {
-    testimonial:
-      "Clarence has consistently demonstrated initiative and skill in every project we've worked on together. He isn't afraid to try new tools and commits himself fully to the team's goals.",
-    name: "Engr. Arvin Getuaban",
-    designation: "Peer Feedback",
-    company: "Web Development Projects",
-    image: "https://api.dicebear.com/7.x/personas/svg?seed=ArvinGetuaban&backgroundColor=b6e3f4&radius=50",
-  },
-  {
-    testimonial:
-      "Dependable and hardworking, Clarence always comes through when the team needs him. His growth in web development has been outstanding.",
-    name: "Jayco Belle Punay",
-    designation: "Peer Feedback",
-    company: "Web Development Projects",
-    image: "https://api.dicebear.com/7.x/personas/svg?seed=JaycoPunay&backgroundColor=ffdfbf&radius=50",
-  },
-  {
-    testimonial:
-      "Clarence's attention to detail and problem-solving mindset have made him a strong asset in every project we've collaborated on.",
-    name: "Mark Cuizon",
-    designation: "Peer Feedback",
-    company: "Web Development Projects",
-    image: "https://api.dicebear.com/7.x/personas/svg?seed=MarkCuizon&backgroundColor=c0aede&radius=50",
-  },
-  {
-    testimonial:
-      "Clarence doesn't just code—he collaborates. He knows how to bring people together to build solutions that work.",
-    name: "Borje Marlon Limbago",
-    designation: "Peer Feedback",
-    company: "Web Development Projects",
-    image: "https://api.dicebear.com/7.x/personas/svg?seed=BorjeLimbago&backgroundColor=b6e3f4&radius=50",
-  },
-  {
-    testimonial:
-      "Clarence stood out as a dependable and technically capable student. His contributions during their capstone project reflected leadership, commitment, and an eagerness to improve. I believe he has great potential in both hardware and software fields.",
-    name: "Stephanie Grace Cortes",
-    designation: "Capstone Adviser",
-    company: "Capstone Project",
-    image: "https://api.dicebear.com/7.x/personas/svg?seed=StephanieCortes&backgroundColor=ffdfbf&radius=50",
-  },
 ];
 
 export { achievements, experiences, projects, services, testimonials };

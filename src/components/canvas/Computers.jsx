@@ -5,7 +5,15 @@ import * as THREE from "three";
 
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
+const getScreenConfig = (width) => {
+  if (width < 500) return { scale: 0.6, position: [0, -3.25, -2.2], fov: 30 }; // Mobile
+  if (width < 768) return { scale: 0.65, position: [0, -3.5, -2.0], fov: 28 }; // Tablet Small
+  if (width < 1024) return { scale: 0.7, position: [0, -3.6, -1.8], fov: 26 }; // Tablet Large
+  if (width < 1280) return { scale: 0.75, position: [0, -3.7, -1.6], fov: 25 }; // Laptop
+  return { scale: 0.75, position: [0, -3.8, -1.5], fov: 25 }; // Desktop
+};
+
+const Computers = ({ screenConfig }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
   const meshRef = React.useRef();
   const [visible, setVisible] = useState(false);
@@ -81,8 +89,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3.30, -2.2] : [0, -3.80, -1.5]}
+        scale={screenConfig.scale}
+        position={screenConfig.position}
         rotation={[-0.00, -0.2, -0.1]}
       />
     </mesh>
@@ -90,27 +98,15 @@ const Computers = ({ isMobile }) => {
 };
 
 const ComputersCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [screenConfig, setScreenConfig] = useState(getScreenConfig(window.innerWidth));
 
   useEffect(() => {
-    // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
-
-    // Set the initial value of the `isMobile` state variable
-    setIsMobile(mediaQuery.matches);
-
-    // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
+    const handleResize = () => {
+      setScreenConfig(getScreenConfig(window.innerWidth));
     };
 
-    // Add the callback function as a listener for changes to the media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    // Remove the listener when the component is unmounted
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
@@ -118,7 +114,7 @@ const ComputersCanvas = () => {
       frameloop='demand'
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ position: [20, 3, 5], fov: screenConfig.fov }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
@@ -127,7 +123,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <Computers screenConfig={screenConfig} />
       </Suspense>
 
       <Preload all />
